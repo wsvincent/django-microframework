@@ -1,6 +1,8 @@
 # Django as a Microframework
 
-Code to accompany Django Fellow Carlton Gibson's talk at DjangoCon US 2019. Link to video will be added when available (soon).
+A single-page Django website as demoed by Django Fellow Carlton Gibson at DjangoCon US 2019.
+
+_Link to video will be added when available (soon)._
 
 ## Instructions
 
@@ -36,10 +38,10 @@ urlpatterns = [
 application = WSGIHandler()
 ```
 
-To run it via Gunicorn...
+To run it via [Gunicorn](https://gunicorn.org):
 
 ```
 (env) $ gunicorn hello_django:application
 ```
 
-Then heck out [http://127.0.0.1:8000](http://127.0.0.1:8000).
+Then check out [http://127.0.0.1:8000](http://127.0.0.1:8000).
