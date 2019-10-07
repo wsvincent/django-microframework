@@ -1,5 +1,9 @@
 # Django as a Microframework
 
+Code to accompany Django Fellow Carlton Gibson's talk at DjangoCon US 2019. Link to video will be added when available (soon).
+
+## Instructions
+
 In directory of your choice...
 
 ```
