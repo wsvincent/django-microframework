@@ -6,12 +6,11 @@ _Link to video will be added when available (soon)._
 
 ## Instructions
 
-In directory of your choice...
+In a directory of your choice:
 
 ```
 $ pipenv install django==2.2.6 gunicorn==19.9.0
 $ pipenv shell
-(env) $ django-admin startproject micro_project .
 (env) $ touch hello_django.py
 ```
 
