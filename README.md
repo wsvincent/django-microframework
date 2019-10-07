@@ -36,4 +36,10 @@ urlpatterns = [
 application = WSGIHandler()
 ```
 
-And then...check out [http://127.0.0.1:8000](http://127.0.0.1:8000).
+To run it via Gunicorn...
+
+```
+(env) $ gunicorn hello_django:application
+```
+
+Then heck out [http://127.0.0.1:8000](http://127.0.0.1:8000).
