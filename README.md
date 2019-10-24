@@ -1,8 +1,7 @@
 # Django as a Microframework
 
-A single-page Django website as demoed by Django Fellow Carlton Gibson at DjangoCon US 2019.
+A single-page Django website as demoed by Django Fellow Carlton Gibson at DjangoCon US 2019 ([https://www.youtube.com/watch?v=w9cYEovduWI&list=PL2NFhrDSOxgXXUMIGOs8lNe2B-f4pXOX-&index=6&t=0s](video)).
 
-_Link to video will be added when available (soon)._
 
 ## Set Up
 
