@@ -103,6 +103,61 @@ Then start the server with Django's `runserver` command.
 
 And navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000). 
 
-## Option 3: [Paolo Melchiorre](https://github.com/pauloxnet/uDjango) 
+## Option 3: [Paolo Melchiorre](https://github.com/pauloxnet) 
+
+Paolo further decreased the size of the file using `lambda` instead of the function, reduced the memory usage using `ALLOWED_HOSTS` instead of `DEBUG`, and made it possible to use the code with `runserver` or `gunicorn`.
+
+```python
+# hello_django2.py
+from django.conf import settings
+from django.core.handlers.wsgi import WSGIHandler
+from django.core.management import execute_from_command_line
+from django.http import HttpResponse
+from django.urls import path
+
+settings.configure(
+    ALLOWED_HOSTS="*",  # new
+    ROOT_URLCONF=__name__,
+)
+
+urlpatterns = [path("", lambda request: HttpResponse("Hello, Django!"))]  # new
+
+if __name__ == "__main__":
+    execute_from_command_line()
+else:  # new
+    application = WSGIHandler()
+```
+
+### Run
+
+#### `runserver`
+
+Start the server with Django's `runserver` command.
+
+```console
+(.venv) $ python hello_django2.py runserver
+```
+
+#### `gunicorn`
+
+Install [Gunicorn](https://gunicorn.org) to run the local server.
+
+```
+(.venv) $ python -m pip install gunicorn==21.2.0
+```
+
+Start the server with the `gunicorn` command.
+
+```console
+(.venv) $ gunicorn hello_django2:application
+```
+
+### Test
+
+Navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+To stop the `runserver` or `gunicorn`, use `Ctrl+c` on the command line.
+
+## Option 3b: [Paolo Melchiorre](https://github.com/pauloxnet/uDjango)
 
 At the DjangoCon US 2023 sprints, Paolo presented a new version of this file that uses ASGI and [uvicorn](https://www.uvicorn.org/) to return the JSON response "Hello World".
