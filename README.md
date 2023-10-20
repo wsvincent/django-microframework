@@ -12,13 +12,17 @@ This repo demonstrates his original code example and subsequent attempts to disp
 
 On the command line navigate to a directory, create and activate a new Python virtual environment, and install Django via `pip`.
 
-```
-# Windows
-$ python -m venv .venv
-$ .venv\Scripts\Activate.ps1
-(.venv) $ python -m pip install django~=4.2.0
+### Windows _(PowerShell)_
 
-# macOS
+```powershell
+> python -m venv .venv
+> .venv\Scripts\Activate.ps1
+(.venv) ...> python -m pip install django~=4.2.0
+```
+
+### macOS _or_ GNU/Linux
+
+```console
 $ python3 -m venv .venv
 $ source .venv/bin/activate
 (.venv) $ python -m pip install django~=4.2.0
