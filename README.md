@@ -62,6 +62,7 @@ Start the server.
 Navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000). To stop the Gunicorn server, use `Ctrl+c` on the command line.
 
 ## Option 2: [Peter Baumgartner](https://github.com/ipmb) 
+
 Peter offered an update using `execute_from_command_line` to make `python hello_django.py` the equivalent of running Django's `manage.py` command. It also does not need `Gunicorn` to be installed.
 
 ```python
@@ -97,3 +98,7 @@ Then start the server with Django's `runserver` command.
 ```
 
 And navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000). 
+
+## Option 3: [Paolo Melchiorre](https://github.com/pauloxnet/uDjango) 
+
+At the DjangoCon US 2023 sprints, Paolo presented a new version of this file that uses ASGI and [uvicorn](https://www.uvicorn.org/) to return the JSON response "Hello World".
